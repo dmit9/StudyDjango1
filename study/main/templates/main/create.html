@@ -1,0 +1,12 @@
+﻿{% extends 'main/base.html' %}
+
+{% block title %}Добавить запись{% endblock%}
+
+{% block content %}
+    <h1>Добавить запись</h1>
+    <form metod="post">
+        <input type="text" placeholder="Ввести кв" class="form-control">
+        <textarea  placeholder="Ввести месяц" class="form-control"></textarea><br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock%}
