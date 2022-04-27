@@ -1,6 +1,8 @@
+from multiprocessing import context
 from django.shortcuts import render
 #from django.http import HttpResponse
 from .models import TaskTable
+from .forms import TaskTable
 
 
 def index(reguest):
@@ -11,4 +13,8 @@ def about(reguest):
     return render(reguest, "main/about.html")
 
 def create(reguest):
+    form = TaskTable()
+    context = {
+        'form': form
+    }
     return render(reguest, "main/create.html")

@@ -5,6 +5,9 @@
 {% block content %}
     <h1>Добавить запись</h1>
     <form metod="post">
+        {% {% csrf_token %} %}
+        {{form.title}}
+        {{form.task}}
         <input type="text" placeholder="Ввести кв" class="form-control">
         <textarea  placeholder="Ввести месяц" class="form-control"></textarea><br>
         <button type="submit" class="btn btn-success">Добавить</button>
